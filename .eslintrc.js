@@ -6,23 +6,18 @@ module.exports = {
   },
   extends: [
     'plugin:vue/vue3-essential',
-    'standard-with-typescript'
-  ],
-  overrides: [
+    'standard'
   ],
   parserOptions: {
-    ecmaVersion: 'latest',
+    ecmaVersion: 13,
+    parser: '@typescript-eslint/parser',
     sourceType: 'module'
   },
   plugins: [
-    'vue'
+    'vue',
+    '@typescript-eslint'
   ],
   rules: {
-    'vue/multi-word-component-names': [
-      'error',
-      {
-        ignores: ['index']
-      }
-    ]
+    'space-before-function-paren': 0
   }
 }
